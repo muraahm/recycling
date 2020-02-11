@@ -15,6 +15,22 @@
   {% else %}
   <title>Recycling</title>
   {% endif %}
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type=text/javascript>
+			$(function() {
+        $('button').remove()
+        setTimeout(function() {
+          $('.init').remove()
+          $('button').prepend('<button>Start</button>')
+    }, 2000);
+			  // $('button').bind('click', function() {
+        //   $('button').remove()
+        //   $()
+        // });
+			});
+    </script>
+    
 </head>
 
 <body>
@@ -28,10 +44,23 @@
     </nav>
   </header>
   <div class="app-container">
+    {% if home == True %}
     <h1>Can I recycle that?</h1>
     <h5>Use ML and image recognition to help you recycle!</h5>
     <h6>(This website will need access to your camera)</h6>
-    <button type="button" class="btn btn-outline-primary">Start</button>
+    {% if init == False %}
+    <button type="button" class="btn btn-outline-primary" onclick="init('yes')">Start</button>
+    {% else %}
+    <h6>init</h6>
+    {% endif %}
+    {% else %}
+    <h1>Can I recycle that?</h1>
+    <h5>Use ML and image recognition to help you recycle!</h5>
+    <h6>(This website will need access to your camera)</h6>
+    <h6 class="init">init ...</h6>
+    <button type="button" class="btn btn-outline-primary" onclick="init('yes')">Start</button>
+    {% endif %}
+
 
   </div>
 
