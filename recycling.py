@@ -14,5 +14,10 @@ def hello_world():
     return render_template('home.html', title='Home')
 
 
+def inti(value):
+    if (value == "yes"):
+        print('hello')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
