@@ -9,7 +9,7 @@ body {
   height: 90vh;
   text-align: center;
   /* margin-bottom: 50%; */
-  margin-top: 30vh;
+  margin-top: 4vh;
   /* height: -webkit-fill-available; */
   display: flex;
   flex-direction: column;
@@ -17,6 +17,59 @@ body {
   /* padding-top: 15%; */
 }
 
+.initializing-container {
+  margin-top: 20vh;
+}
+
+.recognition-container {
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 10px 6px 10px 0 rgba(0, 0, 0, 0.2),
+    0 10px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 90%;
+  border-style: solid;
+  border-width: 5px;
+  height: 90%;
+  position: relative;
+}
+
+#video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.classification-content{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  background: rgba(30, 41, 72, .6);
+  padding: 1em 0;
+  color: white;
+}
+
+.predict {
+  background: none;
+  border: 2px solid white;
+  border-radius: .3em;
+  padding: 1em 2em;
+  color: white;
+  font-size: 14px;
+  display: block;
+  margin: 0 auto 0 auto;
+}
+
+.predict:hover {
+  border: 2px solid rgb(105, 99, 99);
+}
+
+.classification-confirmation {
+  display: none;
+}
+
+.recycling-classification {
+  display: none;
+}
 .navbar {
   width: 100vw;
   height: 60px;
@@ -42,7 +95,7 @@ body {
   font-size: x-large;
 }
 
-.home{
+.home {
   margin: auto;
   height: 50%;
   color: black;
@@ -129,5 +182,50 @@ body {
   transition: background-color 0.5s ease-out;
   box-shadow: 10px 6px 10px 0 rgba(0, 0, 0, 0.2),
     0 10px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
+/* The Modal (background) */
+.about-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.about-modal-container {
+  background-image: linear-gradient(rgb(166, 168, 175), rgb(244, 243, 247));
+  box-shadow: 10px 6px 10px 0 rgba(0, 0, 0, 0.2),
+    0 10px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 12px;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: rgb(104, 100, 100);
+  float: right;
+  width: 20px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.about-p {
+  padding-top: 8%;
+  padding-bottom: 2%;
 }

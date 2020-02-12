@@ -1,6 +1,5 @@
 $(() => {
   $('.start').hide()
-  $('.about-popup').hide()
   $('.recognition-container').hide()
   setTimeout(function() {
     $('.blinking').hide()
@@ -14,12 +13,9 @@ $(() => {
     window.location.href = '/home';
   }); 
   $('.about').bind('click', function() {
-    // $('.about-popup').show()
-    $("#popupwindow").dialog({
-      title: "My Popup Title",
-      width: 600, 
-      modal: true, 
-      resizable: false
-  });   
+    $('.about-modal').css("display", "block");
+    $('.close').bind('click', function() {
+      $('.about-modal').css("display", "none");
+    });
   });
 });
