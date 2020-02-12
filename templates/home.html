@@ -16,21 +16,9 @@
   <title>Recycling</title>
   {% endif %}
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script type=text/javascript>
-			$(function() {
-        $('button').remove()
-        setTimeout(function() {
-          $('.init').remove()
-          $('button').prepend('<button>Start</button>')
-    }, 2000);
-			  // $('button').bind('click', function() {
-        //   $('button').remove()
-        //   $()
-        // });
-			});
-    </script>
-    
+  <script type=text/javascript src="{{ url_for('static', filename='jquery-3.0.0.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='webcam.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='initializing.js') }}"></script>
 </head>
 
 <body>
@@ -38,30 +26,32 @@
     <nav class="navbar">
       <div class="navbar-container">
         <div class="brand">Recycling</div>
-        <div class="link">Home</div>
-        <div class="link">About</div>
+        <div class="home">Home</div>
+        <div class="about">About</div>
       </div>
     </nav>
   </header>
   <div class="app-container">
-    {% if home == True %}
+    <div class="initializing-container">
     <h1>Can I recycle that?</h1>
     <h5>Use ML and image recognition to help you recycle!</h5>
     <h6>(This website will need access to your camera)</h6>
-    {% if init == False %}
-    <button type="button" class="btn btn-outline-primary" onclick="init('yes')">Start</button>
-    {% else %}
-    <h6>init</h6>
-    {% endif %}
-    {% else %}
-    <h1>Can I recycle that?</h1>
-    <h5>Use ML and image recognition to help you recycle!</h5>
-    <h6>(This website will need access to your camera)</h6>
-    <h6 class="init">init ...</h6>
-    <button type="button" class="btn btn-outline-primary" onclick="init('yes')">Start</button>
-    {% endif %}
-
-
+    <button class="blinking">Initializing...</button>
+    <button type="button" class="start">Start</button>
+  </div>
+  <div class="recognition-container">
+    <div id="webcam-frame">
+      <video id="video" height="80%" width="80%" autoplay></video>
+      <!-- <video id="webcam" width="224" height="224" autoplay playsinline muted></video> -->
+    </div>
+  </div>
+  <!-- <div class="popupwindow" class="hidden">
+    <div>
+        <div>Name: Name Surname</div>
+        <div>Code: code123</div>
+    </div>
+</div> -->
+  
   </div>
 
 
