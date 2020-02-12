@@ -18,7 +18,8 @@
 
   <script type=text/javascript src="{{ url_for('static', filename='jquery-3.0.0.js') }}"></script>
   <script type="text/javascript" src="{{ url_for('static', filename='webcam.js') }}"></script>
-	<script type="text/javascript" src="{{ url_for('static', filename='initializing.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='initializing.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='predictions.js') }}"></script>
 </head>
 
 <body>
@@ -33,25 +34,40 @@
   </header>
   <div class="app-container">
     <div class="initializing-container">
-    <h1>Can I recycle that?</h1>
-    <h5>Use ML and image recognition to help you recycle!</h5>
-    <h6>(This website will need access to your camera)</h6>
-    <button class="blinking">Initializing...</button>
-    <button type="button" class="start">Start</button>
-  </div>
-  <div class="recognition-container">
-    <div id="webcam-frame">
-      <video id="video" height="80%" width="80%" autoplay></video>
-      <!-- <video id="webcam" width="224" height="224" autoplay playsinline muted></video> -->
+      <h1>Can I recycle that?</h1>
+      <h5>Use ML and image recognition to help you recycle!</h5>
+      <h6>(This website will need access to your camera)</h6>
+      <button class="blinking">Initializing...</button>
+      <button type="button" class="start">Start</button>
+    </div>
+    <div class="recognition-container">
+      <video id="video" autoplay playsinline muted></video>
+      <div class="classification-content">
+        <button class="predict">Can I recycle this?</button>
+      </div>
+      <div class="classification-confirmation">
+        <div id="result"></div>
+        <button id="yes">Yes</button>
+        <button id="no">No</button>
+      </div>
+      <div class="recycling-classification">
+        <div id="extra-details"></div>
+        <div id="next">Start again</div>
+      </div>
+
     </div>
   </div>
-  <!-- <div class="popupwindow" class="hidden">
-    <div>
-        <div>Name: Name Surname</div>
-        <div>Code: code123</div>
+  </div>
+  <div id="myModal" class="about-modal">
+    <div class="about-modal-container">
+      <span class="close">&times;</span>
+      <p class="about-p">As we always struggle to remember what is recyclable and what isn't<br>
+        So I decided to use Machine Learning with object detection model to recognise objects and help determine which
+        bin I should throw them in ;) <br><br>Ahmed</p>
     </div>
-</div> -->
-  
+
+  </div>
+
   </div>
 
 
@@ -67,4 +83,5 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
 </body>
+
 </html>
