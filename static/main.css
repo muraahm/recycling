@@ -42,7 +42,7 @@ body {
   font-size: x-large;
 }
 
-.link {
+.home{
   margin: auto;
   height: 50%;
   color: black;
@@ -52,7 +52,7 @@ body {
   cursor: pointer;
 }
 
-.link:hover {
+.home:hover {
   background-color: rgb(97, 78, 88);
   -webkit-transition: background-color 0.5s ease-out;
   -moz-transition: background-color 0.5s ease-out;
@@ -61,4 +61,73 @@ body {
   border-radius: 10px 10px 10px 10px;
   box-shadow: 10px 6px 10px 0 rgba(0, 0, 0, 0.2),
     0 10px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.about {
+  margin: auto;
+  height: 50%;
+  color: black;
+  padding: 5px;
+  margin-left: 1rem;
+  font-size: small;
+  cursor: pointer;
+}
+
+.about:hover {
+  background-color: rgb(97, 78, 88);
+  -webkit-transition: background-color 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 10px 6px 10px 0 rgba(0, 0, 0, 0.2),
+    0 10px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.blinking {
+  display: block;
+  width: 200px;
+  margin: 2em auto;
+  border: 1px solid rgb(122, 113, 113);
+  background: none;
+  border-radius: 0.3em;
+  padding: 0.5em 1em;
+  color: black;
+  font-size: 0.8em;
+  animation: 2s infinite ease-in-out blink;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  80% {
+    opacity: 1;
+  }
+}
+
+.start {
+  display: block;
+  width: 200px;
+  margin: 2em auto;
+  border: 1px solid rgb(122, 113, 113);
+  background: rgb(154, 159, 192);
+  border-radius: 0.3em;
+  padding: 0.5em 1em;
+  color: black;
+  font-size: 0.8em;
+}
+
+.start:hover {
+  background: none;
+  -webkit-transition: background-color 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+  box-shadow: 10px 6px 10px 0 rgba(0, 0, 0, 0.2),
+    0 10px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
