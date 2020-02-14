@@ -65,6 +65,8 @@ def predict():
     # pred_class = preds.argmax(axis=-1)            # Simple argmax
     pred_class = decode_predictions(preds, top=1)   # ImageNet Decode
     result = str(pred_class[0][0][1])               # Convert to string
+    confidence = str(pred_class[0][0][2])
+    print(result)
     return (result)
 
 if __name__ == '__main__':
