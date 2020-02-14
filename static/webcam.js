@@ -5,7 +5,7 @@ $(() => {
     navigator.getUserMedia = navigator.getUserMedia ||
       navigator.webkitGetUserMedia ||
       navigator.mozGetUserMedia ||
-      navigator.msGetUserMedia;
+      navigator.msGetUserMedia || navigator.mediaDevices.getUserMedia;
 
     var errorCallback = function (e) {
       // User rejected camera request. Handle appropriately.
