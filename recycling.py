@@ -66,7 +66,7 @@ def predict():
     pred_class = decode_predictions(preds, top=1)   # ImageNet Decode
     result = str(pred_class[0][0][1])               # Convert to string
     confidence = str(pred_class[0][0][2])
-    return (result)
+    return '{} {}'.format(result, confidence)
 
 if __name__ == '__main__':
     app.templates_auto_reload = True
