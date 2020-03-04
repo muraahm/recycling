@@ -38,12 +38,12 @@ body {
   object-fit: cover;
 }
 
-.classification-content{
+.classification-content {
   position: absolute;
   bottom: 0;
   width: 100%;
   z-index: 10;
-  background: rgba(30, 41, 72, .6);
+  background: rgba(30, 41, 72, 0.6);
   padding: 1em 0;
   color: white;
 }
@@ -51,7 +51,7 @@ body {
 .predict {
   background: none;
   border: 2px solid white;
-  border-radius: .3em;
+  border-radius: 0.3em;
   padding: 1em 2em;
   color: white;
   font-size: 14px;
@@ -64,7 +64,33 @@ body {
 }
 
 .classification-confirmation {
-  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  background: rgba(30, 41, 72, 0.6);
+  padding: 1em 0;
+  color: white;
+}
+
+.confirmation-buttons {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 6rem;
+}
+
+#confirm {
+  background: none;
+  border: 2px solid white;
+  border-radius: 0.3em;
+  color: white;
+  font-size: 14px;
+  display: block;
+  margin: 0 auto 0 auto;
+}
+
+#confirm:hover {
+  border: 2px solid rgb(105, 99, 99);
 }
 
 .recycling-classification {
