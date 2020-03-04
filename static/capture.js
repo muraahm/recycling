@@ -22,12 +22,8 @@ $(() => {
         content: picture
       },
       function (data, status) {
-        
-        const result = `Is this ${isVowel(data)} ${data}?`
-
         $('.classification-content').hide()
-        $('#result').text(result);
-
+        $('#result').append(`Is this ${isVowel(data)} <strong class="data">${data}</strong> ?`)
         $('.classification-confirmation').show()
       })
   });
