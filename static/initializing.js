@@ -7,6 +7,7 @@ $(() => {
 }, 5000);
   $('.start').bind('click', function() {
     $('.initializing-container').hide()
+    $('.classification-confirmation').hide()
     $('.recognition-container').show()
   });
   $('.home').bind('click', function() {
