@@ -22,8 +22,11 @@ $(() => {
         content: picture
       },
       function (data, status) {
+        const result = data.match(/^(\S+)\s(.*)/).slice(1);
         $('.classification-content').hide()
-        $('#result').append(`Is this ${isVowel(data)} <strong class="data">${data}</strong> ?`)
+        $('#result').append(
+          `Is this ${isVowel(result[0])} <strong class="data">${result[0]}</strong> ?<br/>${(result[1] * 100).toFixed(2)}%`
+        )
         $('.classification-confirmation').show()
       })
   });
