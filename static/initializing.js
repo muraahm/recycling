@@ -8,6 +8,7 @@ $(() => {
   $('.start').bind('click', function() {
     $('.initializing-container').hide()
     $('.classification-confirmation').hide()
+    $('.recycling-classification').hide()
     $('.recognition-container').show()
   });
   $('.home').bind('click', function() {
