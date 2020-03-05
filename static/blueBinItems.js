@@ -12,4 +12,4 @@ export const blueBinItems = [
   'beer glass',
   'plate',
   'toilet paper'
-]
+];
