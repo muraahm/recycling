@@ -12,7 +12,7 @@ Landing Page
 - - -
 
 ![Image description](https://github.com/muraahm/recycling/blob/master/docs/img2.png)
-First step to image capture
+First step to capture image
 - - -
 
 ![Image description](https://github.com/muraahm/recycling/blob/master/docs/img3.png)
